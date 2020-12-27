@@ -5,7 +5,6 @@ module.exports = {
     title: `Jakub Miedzinski - portfolio`,
     description: `Jakub Miedzinski - portfolio`,
     author: `@miedziak`,
-    pathPrefix: "/portfolio-site",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
