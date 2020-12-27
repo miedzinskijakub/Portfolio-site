@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Css from 'assets/images/svg/css.svg'
-import Git from 'assets/images/svg/Git.svg'
-import Html from 'assets/images/svg/Html.svg'
-import Js from 'assets/images/svg/Js.svg'
-import ReactLogo from 'assets/images/svg/react.svg'
-import Sass from 'assets/images/svg/sass.svg'
+import Css from '../../../assets/images/svg/css.svg'
+import Git from '../../../assets/images/svg/Git.svg'
+import Html from '../../../assets/images/svg/Html.svg'
+import Js from '../../../assets/images/svg/Js.svg'
+import ReactLogo from '../../../assets/images/svg/react.svg'
+import Sass from '../../../assets/images/svg/sass.svg'
 import Fade from 'react-reveal/Fade';
 
 const StyledWrapper = styled.div`

@@ -1,9 +1,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import ContactForm from 'components/Form/Form'
-import figma from 'assets/images/svg/figma.svg'
-import round from 'assets/images/background-round.png'
-import square from 'assets/images/background-square.png'
+import round from '../../../assets/images/background-round.png'
+import square from '../../../assets/images/background-square.png'
 
 
 const StyledWrapper = styled.div`
