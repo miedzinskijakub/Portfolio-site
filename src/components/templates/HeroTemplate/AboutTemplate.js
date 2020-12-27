@@ -145,7 +145,7 @@ const About = () =>(
         <StyledText>
           I am a freelance Web Developer with many years of experience creating simple and modern designs from scratch using top-notch technology. I put in my best effort to create a better platform for clients, websites that are user-oriented, accessible, and with fast loading speed. Whatever your business requirement is, I’m dedicated to using my years of experience to pick the right tools and processes in order to create a design that suits your specific requirement. I recognize that creating a modern website entails combining design, server technology, and the platform that visitors and users interact with. I am also available to join your team, and I'm willing to work efficiently and thoroughly with your in-house team.
         </StyledText>
-        <a href="portfolio-site/src/assets/styles/CV.pdf" download><Download>Download CV</Download></a>
+        <a href="../../../assets/styles/CV.pdf" download><Download>Download CV</Download></a>
         </Half>
      
     </StyledWrapper>
