@@ -1,6 +1,5 @@
 import React from 'react';
 import * as emailjs from 'emailjs-com';
-import Recaptcha from 'react-recaptcha';
 import styled from 'styled-components';
 
 const StyledForm = styled.form`
@@ -83,9 +82,7 @@ ${({theme}) => theme.mq.full}{
 }
 `
 
-const StyledRecaptcha = styled.div`
-transform:scale(0.7)
-`
+
 
 class ContactForm extends React.PureComponent {
   constructor(props) {
@@ -95,28 +92,16 @@ class ContactForm extends React.PureComponent {
       name: '',
       email: '',
       message: '',
-      recaptchaLoad: false,
-    isVerified: false,
+
     };
-    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
-    this.verifiedRecaptcha = this.verifiedRecaptcha.bind(this); 
+    
     this.handleSubmit = this.handleSubmit.bind(this);
     this.resetForm = this.resetForm.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-  recaptchaLoaded() {
-    this.setState({ recaptchaLoad: true });
-  }
-  
-  verifiedRecaptcha(response) {
-    if (response) {
-      this.setState({ isVerified: true });
-    }
-  }
+
   handleSubmit(event) {
-    const { recaptchaLoad, isVerified } = this.state;
     event.preventDefault();
-    if (recaptchaLoad && isVerified) {
       const { name, email, message } = this.state;
       const templateParams = {
         from_name: name,
@@ -131,11 +116,8 @@ class ContactForm extends React.PureComponent {
       'user_d2qlNmLBzGtRhxxzPhi0t'
       );
 
-      alert('Twoja wiadomość została wysłana pomyślnie.');
       this.resetForm();
-    } else {
-      alert('Sprawdź czy kod captcha został poprawnie zrobiony.');
-    }
+    
   }
   
 
@@ -181,14 +163,7 @@ class ContactForm extends React.PureComponent {
               value={message}
               onChange={this.handleChange}
             /><br></br>
-            <StyledRecaptcha>
-                  <Recaptcha
-        sitekey="6LdKCQwaAAAAAL2MbirLf4Lx58H0fHOJF0hZnCdF"
-        render="explicit"
-        onloadCallback={this.recaptchaLoaded}
-        verifyCallback={this.verifiedRecaptcha}
-        />
-    </StyledRecaptcha>
+ 
             <StyledButton color="dark">Send a message</StyledButton>
           
          
