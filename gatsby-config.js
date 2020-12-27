@@ -27,7 +27,7 @@ module.exports = {
         options:{
           name: 'gatsby-starter-default',
           short_name: 'starter',
-          icon: 'src/assets/images/fav.png',
+          icon: './src/assets/images/fav.png',
         }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
