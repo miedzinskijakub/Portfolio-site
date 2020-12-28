@@ -84,6 +84,8 @@ font-family: Poppins,sans-serif;
 letter-spacing: -0.5px;
 font-size: 28px;
 font-weight: 700;
+cursor: pointer;
+
 ${({theme}) => theme.mq.tablet}{
     font-size: 4rem;
 

@@ -39,11 +39,23 @@ const StyledName = styled.p`
 const StyledDescription = styled.p`
 overflow-wrap: break-word;
 
+
+${({theme}) => theme.mq.desktop}{
+
+
+  font-size: 2rem;
+}
+
 `
 
 const Technology = styled.p`
 margin-top: 20px;
 font-size: 2rem;
+${({theme}) => theme.mq.desktop}{
+
+
+  font-weight: bold;
+}
 
 `
 
@@ -61,6 +73,7 @@ const Image = styled.img`
 
         height: 300px;
       }
+
 `
 const ImageCont = styled.div`
 

@@ -25,6 +25,15 @@ background-color: rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 3pt 1pt #542CE2;
 
 }
+
+
+${({theme}) => theme.mq.tablet}{
+  ::placeholder,
+  ::-webkit-input-placeholder {
+    font-size: 2rem;
+  }
+}
+
 ${({theme}) => theme.mq.huge}{
   width: 50%;
   height: 50px;
@@ -40,7 +49,7 @@ ${({theme}) => theme.mq.full}{
 `
 const StyledTextArea = styled.textarea`
 background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 50px;
+  border-radius: 20px;
   border-style: none;
   margin: 5px;
   padding: 30px;
@@ -49,6 +58,12 @@ background-color: rgba(0, 0, 0, 0.1);
   
 :focus{
   box-shadow: 0 0 3pt 1pt #542CE2;
+}
+${({theme}) => theme.mq.tablet}{
+  ::placeholder,
+  ::-webkit-input-placeholder {
+    font-size: 2rem;
+  }
 }
 ${({theme}) => theme.mq.huge}{
   width: 60%;
@@ -69,6 +84,11 @@ border-radius: 50px;
 border-style: none;
 padding: 15px;
 width: 70%;
+transition: 0.3s;
+&:hover{
+  opacity: 0.9; 
+  box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+}
 ${({theme}) => theme.mq.tablet}{
   font-size: 2rem;
   width: 60%;

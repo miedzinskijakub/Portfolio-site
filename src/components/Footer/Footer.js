@@ -19,6 +19,11 @@ const Arrow = styled.div`
     transform: translateX(-50%);
     overflow: hidden;
     box-shadow: 0px 2px 6px 7px rgba(209,209,209,0.52);
+    transition: 0.3s;
+&:hover{
+  opacity: 0.9; 
+  box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+}
     ${({theme}) => theme.mq.full}{
         height: 60px;
         width: 60px;
@@ -76,7 +81,7 @@ const Footer = () =>(
     <StyledDiv>
       < Arrow  duration={1000}
         onClick={scrollToTop}><StyledButton/></Arrow>
-      <StyledMade>©2020 Made with<span role="img" aria-label="heart" aria-hidden="false">❤️</span> by<StyledAllName>&nbsp;Jakub<StyledLast>Miedziński.</StyledLast></StyledAllName></StyledMade>
+      <StyledMade>©2020 Made with <span role="img" aria-label="heart" aria-hidden="false">❤️</span> by<StyledAllName>&nbsp;Jakub<StyledLast>Miedziński.</StyledLast></StyledAllName></StyledMade>
     <StyledGithub/>
     </StyledDiv>
     );

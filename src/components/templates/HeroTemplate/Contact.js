@@ -49,6 +49,12 @@ const ContactParagraph = styled.p`
     ${({theme}) => theme.mq.tablet}{
         font-size: 2.5rem;
       }
+      ${({theme}) => theme.mq.desktop}{
+
+
+        font-size: 2rem;
+        padding: 30px;
+      }
       ${({theme}) => theme.mq.huge}{
         padding: 30px;
         margin: 30px;
@@ -109,6 +115,7 @@ const Paragraph = styled.p`
         font-size: 2.5rem;
         font-weight: bold;
       }
+      
       ${({theme}) => theme.mq.huge}{
         padding: 30px;
         font-size: 3rem;

@@ -18,7 +18,13 @@ const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
         
     }
-
+    ::-webkit-scrollbar {
+        width: 6px;
+        border-left: 1px solid var(--headerBackground);
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #542CE2;
+    }
 `;
 
 export default GlobalStyle;

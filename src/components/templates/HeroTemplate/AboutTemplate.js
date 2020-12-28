@@ -68,6 +68,14 @@ const Image = styled.img`
       animation-duration: 1000ms;
   }
 `
+const Hover = keyframes`
+  0%{
+
+  }
+  100%{
+  }
+`
+
 const Download = styled.button`
     padding: 15px;
     width: 70%;
@@ -75,12 +83,20 @@ const Download = styled.button`
     background: white;
     border-style: none;
     border-radius: 100px;
+    cursor: pointer;
+
+    transition: 0.3s;
+    &:hover{
+      opacity: 0.5; 
+      box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
+    }
+  
     ${({theme}) => theme.mq.tablet}{
       font-size: 2.5rem;
     }
     ${({theme}) => theme.mq.desktop}{
-      font-size: 2.5rem;
-      width: 40%;
+      font-size: 2rem;
+      width: 30%;
 
     }
 `
@@ -100,7 +116,7 @@ ${({theme}) => theme.mq.tablet}{
   font-size: 2.5rem;
 }
 ${({theme}) => theme.mq.desktop}{
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   padding: 35px;
 }
 ${({theme}) => theme.mq.full}{
@@ -123,6 +139,7 @@ const StyledHeading = styled.h3`
   }
 `
 const Half = styled.div`
+
 ${({theme}) => theme.mq.huge}{
   flex: 0 0 50%;
   max-width: 50%;

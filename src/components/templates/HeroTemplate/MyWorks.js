@@ -14,6 +14,7 @@ ${({theme}) => theme.mq.tablet}{
 
     font-size: 2.5rem;
   }
+
   
   ${({theme}) => theme.mq.huge}{
 
@@ -24,14 +25,20 @@ ${({theme}) => theme.mq.tablet}{
 
   }
 `
+const StyledParagraph = styled.p`
+${({theme}) => theme.mq.desktop}{
 
+
+  font-size: 2rem;
+}
+`
 
 
 const MyWorks = () =>(
     <StyledWrapper id="work">
         <h4>MY RECENT WORK</h4>
         <span role="img" aria-label="smile" aria-hidden="false">🏆</span>
-        <p>Here are a few design projects I've worked on recently.</p>
+        <StyledParagraph>Here are a few design projects I've worked on recently.</StyledParagraph>
         <Card/>
     </StyledWrapper>
     );

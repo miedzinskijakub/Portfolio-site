@@ -7,19 +7,10 @@ const StyledHamburger = styled.button`
     background: none;
     z-index: 9999;
     
-    ${({theme}) => theme.mq.desktop}{
-        
-            padding: 15px;
-            margin-right: 30px;
-    }
-    ${({theme}) => theme.mq.huge}{
-        padding: 20px;
 
-    }
-    ${({theme}) => theme.mq.full}{
+    ${({theme}) => theme.mq.desktop}{
         display: none;
 
-    }
 `;
 
     const InnerHamburger = styled.div`

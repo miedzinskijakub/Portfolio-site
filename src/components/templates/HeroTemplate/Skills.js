@@ -15,6 +15,7 @@ text-align: center;
 ${({theme}) => theme.mq.tablet}{
     font-size: 3rem;
   }
+  
   ${({theme}) => theme.mq.full}{
     font-size: 4rem;
 
@@ -35,7 +36,13 @@ const StyledImages = styled.img`
     
       }
 `
+const StyledParagraph = styled.p`
+${({theme}) => theme.mq.desktop}{
 
+
+  font-size: 2rem;
+}
+`
 //const ListSkills = [
   //  {"name": "React", },
   //  {"name": "Pub-site", "description": "This is simple pub-page", "technology": "JS"},
@@ -44,7 +51,7 @@ const StyledImages = styled.img`
 const MySkills = () =>(
     <StyledWrapper>
        <h4>Skills & Tools</h4>
-        <p>For those who know what they’re looking for..</p>
+        <StyledParagraph>For those who know what they’re looking for..</StyledParagraph>
         <Fade>
         <List>
             <StyledImages src={Html}></StyledImages>
