@@ -189,6 +189,7 @@ from, to { border-color: transparent }
 
     }
     `
+    /*
     const Fala = styled.img`
     position: absolute;
     bottom: -10px;
@@ -228,7 +229,13 @@ ${({theme}) => theme.mq.desktop}{
     left: 0;
       `
 
+          <Waves>
+      <Fala src={Wave}></Fala>
+      <WaveSvg1 src={WaveBack}></WaveSvg1>
 
+ 
+</Waves>
+*/
 const Hero = () =>(
 
   
@@ -241,12 +248,8 @@ const Hero = () =>(
 
     <Link to="contact" spy={true} smooth={true}><Hire>Hire me</Hire></Link>
     <Scroll></Scroll>
-    <Waves>
-      <Fala src={Wave}></Fala>
-      <WaveSvg1 src={WaveBack}></WaveSvg1>
+   
 
- 
-</Waves>
 </StyledWrapper>
 
 );

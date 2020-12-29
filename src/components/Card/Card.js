@@ -10,6 +10,11 @@ const StyledCards = styled.div`
     padding: 15px;
     box-shadow: 0px 2px 6px 7px rgba(209,209,209,0.92);
     border-radius: 10px;
+
+    transition: 0.3s;
+&:hover{
+  transform: scale(1.01); 
+}
     ${({theme}) => theme.mq.tablet}{
         margin: 10px;
         padding: 15px;
@@ -170,7 +175,7 @@ const Card = () =>(
                 <DottedLine></DottedLine>
                 <StyledDescription>{pro.description}</StyledDescription>
                 <a href={pro.live}><StyledButtonLive>Live</StyledButtonLive></a>
-                <a href={pro.code}><StyledButtonCode>Code</StyledButtonCode></a>
+                <a href={pro.code}><StyledButtonCode>GitHub</StyledButtonCode></a>
 
                 <Technology>Technology used: {pro.technology}</Technology>
                 </StyledProjects>

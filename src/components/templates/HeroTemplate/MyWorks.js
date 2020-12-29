@@ -9,6 +9,7 @@ text-align: center;
 flex-direction: column;
 width: 100vw;
 font-family: ${({theme}) => theme.font.family.roboto};
+font-size: ${({theme}) => theme.font.size.s};
 
 ${({theme}) => theme.mq.tablet}{
 

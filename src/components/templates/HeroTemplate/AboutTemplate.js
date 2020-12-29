@@ -2,6 +2,8 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import photo from '../../../assets/images/photo.jpg'
 import cv from '../../../assets/styles/CV.pdf'
+import Wave from '../../../assets/images/wave.png'
+import WaveBack from '../../../assets/images/wave_back.png'
 
 const FadeInLeft = keyframes`
 0% {
@@ -42,6 +44,11 @@ const StyledWrapper = styled.div`
     ${({theme}) => theme.mq.tablet}{
       font-size: 2.5rem;
   }
+  ${({theme}) => theme.mq.desktop}{
+    flex-direction: row;
+    align-items: center;
+
+}
   ${({theme}) => theme.mq.huge}{
     flex-direction: row;
     align-items: center;
@@ -57,6 +64,16 @@ const Image = styled.img`
     transform: translateX(-50%);
     border-radius: 20px;
 
+    ${({theme}) => theme.mq.desktop}{
+      left: 0%;
+      transform: translateX(-0%);
+      flex: 0 0 50%;
+      max-width: 30%;
+      height: 450px;
+      animation-name: ${FadeInLeft};
+      animation-delay: 0ms;
+      animation-duration: 1000ms;
+  }
     ${({theme}) => theme.mq.huge}{
       left: 0%;
       transform: translateX(-0%);
@@ -139,7 +156,13 @@ const StyledHeading = styled.h3`
   }
 `
 const Half = styled.div`
-
+${({theme}) => theme.mq.desktop}{
+  flex: 0 0 50%;
+  max-width: 50%;
+  animation-name: ${FadeInRight};
+  animation-delay: 0ms;
+  animation-duration: 1000ms;
+}
 ${({theme}) => theme.mq.huge}{
   flex: 0 0 50%;
   max-width: 50%;
@@ -149,11 +172,53 @@ ${({theme}) => theme.mq.huge}{
 }
 `
 
-   
+const Fala = styled.img`
+position: absolute;
+bottom: -10px;
+left: 0;
+width: 100%;
+${({theme}) => theme.mq.desktop}{
+  }
+  ${({theme}) => theme.mq.full}{
+    width: 100%!important;
+    height: 300px;    
+
+
+  }
+`
+const WaveSvg1 = styled.img`
+position: absolute;
+bottom: -10px;
+left: 0;
+
+width: 100%;
+z-index: -1;
+opacity: 0.7;
+${({theme}) => theme.mq.desktop}{
+  }
+  ${({theme}) => theme.mq.full}{
+    width: 100%!important;
+    height: 300px;    
+
+  }
+`
+  const Waves = styled.div`
+  overflow: hidden;
+  position: absolute;
+width: 100vw;
+height: 25%;
+bottom: 0px;
+left: 0;
+  `
 
 const About = () =>(
     <div>
+<Waves>
+      <Fala src={Wave}></Fala>
+      <WaveSvg1 src={WaveBack}></WaveSvg1>
 
+ 
+</Waves>
     <StyledWrapper id="about">
 
 

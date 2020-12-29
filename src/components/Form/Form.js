@@ -129,6 +129,7 @@ class ContactForm extends React.PureComponent {
         to_name: 'Jakub',
         message: message,
       };
+    
     emailjs.send(
       'service_zuw9gk5',
       'template_72t47tb',
