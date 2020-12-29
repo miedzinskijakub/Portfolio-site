@@ -24,7 +24,7 @@ const StyledWrapper = styled.div`
     ${({theme}) => theme.mq.desktop}{
         width: auto;
         height: auto;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         position: relative;
         transform: none;
@@ -75,7 +75,6 @@ ${({theme}) => theme.mq.tablet}{
     }
     ${({theme}) => theme.mq.huge}{
         font-size: 2rem;
-        margin-right: 100px;
         margin-top: auto;
         position: relative;
         opacity: 1;
@@ -126,9 +125,7 @@ ${({theme}) => theme.mq.full}{
 }
 `
 const LetsTalk = styled.button`
-display: flex;
-flex-direction: row;
-align-items: center;
+
 justify-content: center;
 text-align: center;
 font-size: 2.6rem;
@@ -147,6 +144,7 @@ border-radius: 100px;
 ${({theme}) => theme.mq.tablet}{
 font-size: 4rem;
 }
+
 ${({theme}) => theme.mq.desktop}{
     display: flex;
     flex-direction: row;
@@ -154,7 +152,6 @@ ${({theme}) => theme.mq.desktop}{
     justify-content: center;
     text-align: center;
     font-size: 2rem;
-    margin-right: 100px;
     margin-top: auto;
     position: relative;
     opacity: 1;

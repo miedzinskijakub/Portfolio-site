@@ -77,12 +77,17 @@ const scrollToTop = () => {
     scroll.scrollToTop(); 
 };
 
+const LinkGithub = styled.a`
+color: #FFFFFF;
+color: black;
+`
+
 const Footer = () =>(
     <StyledDiv>
       < Arrow  duration={1000}
         onClick={scrollToTop}><StyledButton/></Arrow>
       <StyledMade>©2020 Made with <span role="img" aria-label="heart" aria-hidden="false">❤️</span> by<StyledAllName>&nbsp;Jakub<StyledLast>Miedziński.</StyledLast></StyledAllName></StyledMade>
-    <StyledGithub/>
+    <LinkGithub href="https://github.com/miedzinskijakub/"><StyledGithub/></LinkGithub>
     </StyledDiv>
     );
     

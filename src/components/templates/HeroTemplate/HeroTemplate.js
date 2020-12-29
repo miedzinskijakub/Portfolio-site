@@ -191,7 +191,7 @@ from, to { border-color: transparent }
     `
     const Fala = styled.img`
     position: absolute;
-    bottom: -1px;
+    bottom: -10px;
     left: 0;
     width: 100%;
 ${({theme}) => theme.mq.desktop}{
@@ -205,7 +205,7 @@ ${({theme}) => theme.mq.desktop}{
     `
     const WaveSvg1 = styled.img`
     position: absolute;
-    bottom: 0px;
+    bottom: -10px;
     left: 0;
 
     width: 100%;

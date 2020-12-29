@@ -13,7 +13,7 @@ margin-bottom: 30px;
 padding: 15px;
 box-shadow: 0px 2px 6px 7px rgba(209,209,209,0.10);
 border-radius: 10px;
-${({theme}) => theme.mq.full}{
+${({theme}) => theme.mq.desktop}{
   display: flex;
   flex-direction: row;
   z-index: 10;
@@ -125,40 +125,13 @@ const Paragraph = styled.p`
         z-index: 15;
       }
 `
-const Sphere = styled.div`
-    position: absolute;
-    z-index: -1;
-    right: 0%;
-    top: 20;
-    background-color: #3B43F2;
-    border-radius: 100%;
-    height: 400px;
-    width: 400px;
-    overflow: hidden;
-    ${({theme}) => theme.mq.tablet}{
-        height: 600px;
-        width: 600px;
-      }
-      ${({theme}) => theme.mq.huge}{
-        height: 700px;
-        width: 700px;
-      }
-      ${({theme}) => theme.mq.full}{
-        left: -20%;
 
-        z-index: 11;
-      }
-`
-const Figma = styled.img`
-    position: relative;
-    height: 250px;
-    top: 30%;
-    left: 25%;
-    transform: rotate(-40deg);
-      
-`
 const HalfDescription = styled.div`
+${({theme}) => theme.mq.desktop}{
+  flex: 0 0 50%;
 
+  z-index: 15;
+}
 ${({theme}) => theme.mq.full}{
   flex: 0 0 50%;
 
@@ -168,7 +141,14 @@ ${({theme}) => theme.mq.full}{
 
 const ContactShapes = styled.img`
 display: none;
+${({theme}) => theme.mq.desktop}{
+  display: inline-block;
 
+  position: absolute;
+  left: -15%;
+  top: -5%;
+  height: 150%;
+}
 ${({theme}) => theme.mq.full}{
   display: inline-block;
 
@@ -181,6 +161,16 @@ ${({theme}) => theme.mq.full}{
 `
 const ContactShapesSquare = styled.img`
 display: none;
+${({theme}) => theme.mq.desktop}{
+  display: inline-block;
+
+  position: absolute;
+  z-index: -2;
+  right: -10%;
+  bottom: -10%;
+
+    width: 400px;
+}
     ${({theme}) => theme.mq.full}{
       display: inline-block;
 

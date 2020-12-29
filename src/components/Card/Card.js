@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Baroq from 'assets/images/baroq.png'
 import Fade from 'react-reveal/Fade';
+import Weather from 'assets/images/weather.png'
 
 const StyledCards = styled.div`
     margin: 20px;
@@ -38,6 +39,7 @@ const StyledName = styled.p`
 `
 const StyledDescription = styled.p`
 overflow-wrap: break-word;
+font-size: 2rem;
 
 
 ${({theme}) => theme.mq.desktop}{
@@ -91,10 +93,69 @@ const DottedLine = styled.div`
         
       }
 `
+const StyledButtonLive = styled.button`
+padding: 15px;
+cursor: pointer;
+margin-right: 5px;
+color: white;
+margin-top: 10px;
+background: #303030;
+border-style: none;
+border-radius: 100px;
+transition: 0.3s;
+&:hover{
+  opacity: 0.9; 
+}
+${({theme}) => theme.mq.tablet}{
+    font-size: 3rem;
+}
+${({theme}) => theme.mq.desktop}{
+    margin-top: 20px;
+    margin-right: 10px;
 
+    padding: 10px;
+    width: 25%;
+    font-size: 2.5rem;
+
+  }
+  ${({theme}) => theme.mq.full}{
+    font-size: 3rem;
+    width: 20%;
+  }
+`
+const StyledButtonCode = styled.button`
+padding: 15px;
+cursor: pointer;
+margin-top: 10px;
+
+color: white;
+background: #303030;
+border-style: none;
+border-radius: 100px;
+transition: 0.3s;
+&:hover{
+  opacity: 0.9; 
+}
+${({theme}) => theme.mq.tablet}{
+    font-size: 3rem;
+}
+${({theme}) => theme.mq.desktop}{
+    margin-top: 20px;
+    margin-right: 10px;
+
+    padding: 10px;
+    width: 25%;
+    font-size: 2.5rem;
+
+  }
+  ${({theme}) => theme.mq.full}{
+    font-size: 3rem;
+    width: 20%;
+  } 
+`
 const Projects = [
-    {"images": Baroq,"name": "Weather-app", "description": "Simple, lightweight & easy-to-use weather app for website.", "technology": "JS"},
-    {"images": Baroq,"name": "Pub-site", "description": "This is simple pub-page", "technology": "JS"},
+    {"images": Weather,"name": "Weather-app", "description": "Simple, lightweight & easy-to-use weather app for website.", "technology": "JS", "live": "https://miedzinskijakub.github.io/Weather-app/", "code": "https://github.com/miedzinskijakub/Weather-app"},
+    {"images": Baroq,"name": "Pub-site", "description": "This is simple pub-page", "technology": "JS", "live": "https://miedzinskijakub.github.io/pub/", "code": "https://github.com/miedzinskijakub/pub"},
 ];
 
 const Card = () =>(
@@ -108,14 +169,17 @@ const Card = () =>(
                 <StyledName>{pro.name}</StyledName>
                 <DottedLine></DottedLine>
                 <StyledDescription>{pro.description}</StyledDescription>
+                <a href={pro.live}><StyledButtonLive>Live</StyledButtonLive></a>
+                <a href={pro.code}><StyledButtonCode>Code</StyledButtonCode></a>
+
                 <Technology>Technology used: {pro.technology}</Technology>
                 </StyledProjects>
-
+                
                 </StyledCards>
                 </Fade>
 
         ))}  
-
+    
     </div>
     );
     
