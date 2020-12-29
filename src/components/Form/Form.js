@@ -119,6 +119,7 @@ class ContactForm extends React.PureComponent {
     this.handleChange = this.handleChange.bind(this);
   }
 
+
   handleSubmit(event) {
     event.preventDefault();
       const { name, email, message } = this.state;
@@ -156,10 +157,12 @@ class ContactForm extends React.PureComponent {
 
 
   render() {
+
+   
     const { name, email, message } = this.state;
 
     return (
-      <StyledForm netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true" onSubmit={this.handleSubmit}>
+      <StyledForm netlify-honeypot="bot-field" data-netlify="true" onSubmit={this.handleSubmit}>
               <p style={{visibility: 'hidden'}}>
           <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
         </p>
@@ -187,8 +190,7 @@ class ContactForm extends React.PureComponent {
               value={message}
               onChange={this.handleChange}
             /><br></br>
-      <div className="g-recaptcha" data-sitekey="6LcvfhkaAAAAAEa73rwhBS-1nHf3MIMDPacakXDh
-"></div>
+  
 
             <StyledButton color="dark">Send a message</StyledButton>
           
