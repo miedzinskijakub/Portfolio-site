@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { BsFillEnvelopeFill } from 'react-icons/bs';
 
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 
 

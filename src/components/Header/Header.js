@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled, {keyframes} from 'styled-components'
 import Hamburger from 'components/Hamburger/Hamburger'
 import MobileMenu from "components/MobileMenu/MobileMenu"
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { animateScroll as scroll } from 'react-scroll'
 
 const scrollToTop = () => {
     scroll.scrollToTop(); 

@@ -1,9 +1,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Dots from 'components/Dots/Dots'
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import Wave from '../../../assets/images/wave.png'
-import WaveBack from '../../../assets/images/wave_back.png'
+import { Link  } from 'react-scroll'
+
 
 const FadeInLeft = keyframes`
 0% {
@@ -62,7 +61,7 @@ const Hello = styled.span`
 const Hire = styled.button`
     padding: 15px;
     cursor: pointer;
-
+      z-index: 999999999;
     width: 40%;
     color: white;
     background: linear-gradient(-47deg,#762ce2,#542ce2);

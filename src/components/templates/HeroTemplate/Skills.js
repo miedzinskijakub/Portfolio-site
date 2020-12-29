@@ -6,6 +6,8 @@ import Html from '../../../assets/images/svg/html.svg'
 import Js from '../../../assets/images/svg/js.svg'
 import ReactLogo from '../../../assets/images/svg/react.svg'
 import Sass from '../../../assets/images/svg/sass.svg'
+import Gatsby from '../../../assets/images/svg/gatsby.svg'
+
 import Fade from 'react-reveal/Fade';
 
 const StyledWrapper = styled.div`
@@ -60,6 +62,7 @@ const MySkills = () =>(
             <StyledImages src={ReactLogo}></StyledImages>
             <StyledImages src={Git}></StyledImages>
             <StyledImages src={Sass}></StyledImages>
+            <StyledImages src={Gatsby}></StyledImages>
 
         </List>
         </Fade>

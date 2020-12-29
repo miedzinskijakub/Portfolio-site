@@ -85,13 +85,6 @@ const Image = styled.img`
       animation-duration: 1000ms;
   }
 `
-const Hover = keyframes`
-  0%{
-
-  }
-  100%{
-  }
-`
 
 const Download = styled.button`
     padding: 15px;
@@ -178,6 +171,7 @@ bottom: -10px;
 left: 0;
 width: 100%;
 ${({theme}) => theme.mq.desktop}{
+  height: 260px;
   }
   ${({theme}) => theme.mq.full}{
     width: 100%!important;
@@ -195,6 +189,7 @@ width: 100%;
 z-index: -1;
 opacity: 0.7;
 ${({theme}) => theme.mq.desktop}{
+  height: 260px;
   }
   ${({theme}) => theme.mq.full}{
     width: 100%!important;
@@ -206,9 +201,11 @@ ${({theme}) => theme.mq.desktop}{
   
   position: relative;
 width: 100vw;
-height: 25%;
+height: 20%;
 top: -1px;
   `
+
+
 
 const About = () =>(
     <div>

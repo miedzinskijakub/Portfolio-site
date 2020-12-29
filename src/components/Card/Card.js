@@ -72,22 +72,6 @@ ${({theme}) => theme.mq.desktop}{
 
 `
 
-const Image = styled.img`
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    object-fit: cover;
-    object-position: center center;
-    height: 120px;
-    border-radius: 10px;
-    ${({theme}) => theme.mq.tablet}{
-        width: 70%;
-
-        height: 300px;
-      }
-
-`
 const ImageCont = styled.div`
 width: 100%;
 height: 100px; 
@@ -203,8 +187,7 @@ const Projects = [
 const Card = () =>(
     <FlexCard>
         {Projects.map( (pro, index) => (
-                            <Fade left key={index}>
-
+            <Fade left key={index}>
             <StyledCards animate={false} >
                 <StyledProjects>
                 <ImageCont style={{backgroundImage: `url(${pro.images})`}}></ImageCont>
