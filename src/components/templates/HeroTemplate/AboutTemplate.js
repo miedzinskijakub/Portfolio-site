@@ -207,7 +207,7 @@ ${({theme}) => theme.mq.desktop}{
   position: absolute;
 width: 100vw;
 height: 25%;
-bottom: -10px;
+bottom: -50px;
 left: 0;
   `
 
