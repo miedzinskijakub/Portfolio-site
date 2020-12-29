@@ -187,7 +187,7 @@ class ContactForm extends React.PureComponent {
               value={message}
               onChange={this.handleChange}
             /><br></br>
-      <div class="g-recaptcha" data-sitekey="6LcvfhkaAAAAAEa73rwhBS-1nHf3MIMDPacakXDh
+      <div className="g-recaptcha" data-sitekey="6LcvfhkaAAAAAEa73rwhBS-1nHf3MIMDPacakXDh
 "></div>
 
             <StyledButton color="dark">Send a message</StyledButton>
