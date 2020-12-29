@@ -169,7 +169,8 @@ from, to { border-color: transparent }
 `
 
     const Job = styled.span`
-    display: none;
+    display: block;
+
     ${({theme}) => theme.mq.desktop}{
       display: block;
       font-size: 4rem;
