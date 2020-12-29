@@ -203,25 +203,23 @@ ${({theme}) => theme.mq.desktop}{
   }
 `
   const Waves = styled.div`
-  overflow: hidden;
-  position: absolute;
+  
+  position: relative;
 width: 100vw;
 height: 25%;
-bottom: -50px;
-left: 0;
+top: -1px;
   `
 
 const About = () =>(
     <div>
-<Waves>
+   <Waves>
       <Fala src={Wave}></Fala>
       <WaveSvg1 src={WaveBack}></WaveSvg1>
-
- 
 </Waves>
+
     <StyledWrapper id="about">
 
-
+ 
         <Image src={photo}></Image>
         <Half>
         <StyledHeading>A bit about me<span role="img" aria-label="smile" aria-hidden="false">👋</span></StyledHeading>
@@ -232,6 +230,7 @@ const About = () =>(
         </Half>
      
     </StyledWrapper>
+
     <WaveSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#542CE2" fillOpacity="1" d="M0,224L48,197.3C96,171,192,117,288,117.3C384,117,480,171,576,208C672,245,768,267,864,240C960,213,1056,139,1152,117.3C1248,96,1344,128,1392,144L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
       </WaveSvg>
