@@ -205,10 +205,9 @@ const MyWorks = () =>(
         <Pulsate></Pulsate>
         I'm currently avaliable for freelance work.
          </Paragraph>
-         <ContactForm/>
 
         </Status>
     </StyledWrapper>
     );
-    
+    //<ContactForm/>
     export default MyWorks;
