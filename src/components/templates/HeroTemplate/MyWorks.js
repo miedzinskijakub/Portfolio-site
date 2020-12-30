@@ -26,6 +26,11 @@ ${({theme}) => theme.mq.tablet}{
     font-size: 3.5rem;
 
   }
+  ${({theme}) => theme.mq.iphone}{
+    font-size: 2rem;
+ 
+
+  }
 `
 const StyledParagraph = styled.p`
 ${({theme}) => theme.mq.desktop}{
