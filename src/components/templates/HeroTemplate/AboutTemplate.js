@@ -69,7 +69,7 @@ const Image = styled.img`
       transform: translateX(-0%);
       flex: 0 0 50%;
       max-width: 30%;
-      height: 450px;
+      height: 400px;
       animation-name: ${FadeInLeft};
       animation-delay: 0ms;
       animation-duration: 1000ms;
@@ -106,7 +106,7 @@ const Download = styled.button`
     }
     ${({theme}) => theme.mq.desktop}{
       font-size: 2rem;
-      width: 30%;
+      width: 40%;
 
     }
 `

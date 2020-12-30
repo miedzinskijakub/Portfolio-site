@@ -34,8 +34,8 @@ const StyledCards = styled.div`
           height: 100%;
       }
       ${({theme}) => theme.mq.full}{
-        width: 50%;
-    
+        width: 500px;
+
       }
 `
 
@@ -135,8 +135,8 @@ ${({theme}) => theme.mq.desktop}{
 
   }
   ${({theme}) => theme.mq.full}{
-    font-size: 3rem;
-    width: 20%;
+    font-size: 2.5rem;
+    width: 25%;
   }
 `
 const StyledButtonCode = styled.button`
@@ -166,8 +166,8 @@ ${({theme}) => theme.mq.desktop}{
 
   }
   ${({theme}) => theme.mq.full}{
-    font-size: 3rem;
-    width: 20%;
+    font-size: 2.5rem;
+    width: 25%;
   } 
 `
 const FlexCard = styled.div`

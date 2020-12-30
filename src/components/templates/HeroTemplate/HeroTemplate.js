@@ -32,23 +32,31 @@ const StyledWrapper = styled.div`
     font-family: ${({theme}) => theme.font.family.roboto};
       ${({theme}) => theme.mq.desktop}{
         overflow: hidden;
-      }
+
+      }  
+ 
 `
 
 const StyledHeading = styled.h1`
     color: #121212;
+    font-size: 7rem;
     ${({theme}) => theme.mq.tablet}{
       margin-right: 10px;
-      font-size: 10rem;
+      font-size: 13rem;
 
     }
     ${({theme}) => theme.mq.desktop}{
         margin-right: 10px;
-        font-size: 7rem;
+        font-size: 10rem;
 
       }
+      ${({theme}) => theme.mq.huge}{
+        font-size: 12rem;
+        display: inline-block;
+    
+      }
       ${({theme}) => theme.mq.full}{
-        font-size: 8rem;
+        font-size: 14rem;
         animation-name: ${FadeInLeft};
         animation-delay: 0ms;
         animation-duration: 1000ms;
@@ -57,6 +65,11 @@ const StyledHeading = styled.h1`
 `
 const Hello = styled.span`
     display: block;
+    ${({theme}) => theme.mq.huge}{
+      font-size: 10rem;
+      display: inline-block;
+  
+    }
 `
 const Hire = styled.button`
     padding: 15px;
@@ -73,22 +86,30 @@ const Hire = styled.button`
       box-shadow: 2px 5px 5px 0px #6A41E5, 5px 5px 15px 5px rgba(0,0,0,0);
     }
     ${({theme}) => theme.mq.tablet}{
-        font-size: 3rem;
+      font-size: 2rem;
+      width: 30%;
     }
     ${({theme}) => theme.mq.desktop}{
         margin-top: 20px;
         margin-right: 10px;
 
         padding: 10px;
-        width: 25%;
+        width: 20%;
+
         font-size: 2.5rem;
         animation-name: ${FadeInLeft};
         animation-delay: 0ms;
         animation-duration: 1000ms;
       }
+      ${({theme}) => theme.mq.huge}{
+
+        width: 20%;
+
+
+      }
       ${({theme}) => theme.mq.full}{
         font-size: 3rem;
-        width: 20%;
+        width: 15%;
       }
 `
 
@@ -175,18 +196,26 @@ from, to { border-color: transparent }
     animation: ${Typing} .80s step-end infinite;
     margin-top: 10px;
     margin-bottom: 10px;
+    ${({theme}) => theme.mq.tablet}{
+      font-size: 6rem;
 
+    }
     ${({theme}) => theme.mq.desktop}{
       display: block;
-      font-size: 4rem;
+      font-size: 5rem;
       font-weight: bold;
       border-right: .15em solid red;
       animation: ${Typing} .80s step-end infinite;
 
     }
+    
+    ${({theme}) => theme.mq.huge}{
+      font-size: 7.5rem;
+  
+    }
     ${({theme}) => theme.mq.full}{
       display: block;
-      font-size: 6rem;
+      font-size: 9rem;
       font-weight: bold;
 
       border-right: .15em solid red;
@@ -247,7 +276,10 @@ const Hero = () =>(
 <StyledWrapper id="home">
     <Dots/>
     <StyledHeading >
-    <Hello>Hi</Hello>there<Hello>I'm</Hello>Jakub
+      <div>Hi there</div>
+      
+      <div>I'm Jakub</div>
+      
     <Job>Frontend Developer</Job>
     </StyledHeading>
 
