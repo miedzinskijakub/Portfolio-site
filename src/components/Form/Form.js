@@ -1,6 +1,7 @@
 import React from 'react';
 import * as emailjs from 'emailjs-com';
 import styled from 'styled-components';
+import Recaptcha from 'react-recaptcha';
 
 const StyledForm = styled.form`
   display: flex;
@@ -112,16 +113,32 @@ class ContactForm extends React.PureComponent {
       name: '',
       email: '',
       message: '',
+      recaptchaLoad: false,
+      isVerified: false,
     };
-    
+    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
+    this.verifiedRecaptcha = this.verifiedRecaptcha.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.resetForm = this.resetForm.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
+  recaptchaLoaded() {
+    this.setState({ recaptchaLoad: true });
+  }
+  
+  verifiedRecaptcha(response) {
+    if (response) {
+      this.setState({ isVerified: true });
+    }
+  }
 
   handleSubmit(event) {
+    const { recaptchaLoad, isVerified } = this.state;
+
     event.preventDefault();
+    if (recaptchaLoad && isVerified) {
+
       const { name, email, message } = this.state;
       const templateParams = {
         from_name: name,
@@ -136,9 +153,11 @@ class ContactForm extends React.PureComponent {
        templateParams,
       'user_d2qlNmLBzGtRhxxzPhi0t'
       );
-
+      alert("Twoja wiadomość została wysłana pomyślnie.");
       this.resetForm();
-    
+    }else{
+      alert('Sprawdź czy kod captcha został poprawnie wprowadzony.');
+    }
   }
   
 
@@ -191,6 +210,12 @@ class ContactForm extends React.PureComponent {
               onChange={this.handleChange}
             /><br></br>
   
+          <Recaptcha
+        sitekey="6LcvfhkaAAAAAEa73rwhBS-1nHf3MIMDPacakXDh"
+          render="explicit"
+          onloadCallback={this.recaptchaLoaded}
+        verifyCallback={this.verifiedRecaptcha}
+          />
 
             <StyledButton color="dark">Send a message</StyledButton>
           

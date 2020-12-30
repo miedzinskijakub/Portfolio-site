@@ -10,17 +10,18 @@ const GlobalStyle = createGlobalStyle`
     }
     html{
         font-size: 62.5%;
-
+  
     }
 
     body{
         font-size: 1.6rem;
         overflow-x: hidden;
-        
+ 
     }
+   
     ::-webkit-scrollbar {
         width: 6px;
-        border-left: 1px solid var(--headerBackground);
+    
     }
     ::-webkit-scrollbar-thumb {
         background-color: #542CE2;
