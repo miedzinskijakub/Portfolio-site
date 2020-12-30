@@ -14,8 +14,6 @@ font-size: ${({ theme }) => theme.font.size.s};
 
 ${({ theme }) => theme.mq.iphone}{
   font-size: 2rem;
-
-
 }
 
 ${({ theme }) => theme.mq.tablet}{
@@ -50,6 +48,34 @@ const CardFlex = styled(Card)`
 const FlexLetter = styled.div`
 
 `
+const MoreProjects = styled.p`
+font-size: 2.3rem;
+margin-top: 30px;
+margin-bottom: 30px;
+
+${({ theme }) => theme.mq.iphone}{
+  font-size: 2rem;
+}
+
+${({ theme }) => theme.mq.tablet}{
+
+    font-size: 2.5rem;
+  }
+
+  ${({ theme }) => theme.mq.desktop}{
+
+    font-size: 3rem;
+  }
+  ${({ theme }) => theme.mq.huge}{
+
+    font-size: 3rem;
+  }
+  ${({ theme }) => theme.mq.full}{
+    font-size: 3.5rem;
+
+  }
+`
+
 const MyWorks = () => (
   <StyledWrapper id="work">
     <FlexLetter>
@@ -58,6 +84,7 @@ const MyWorks = () => (
       <StyledParagraph>Here are a few design projects I've worked on recently.</StyledParagraph>
     </FlexLetter>
     <CardFlex />
+    <MoreProjects>More projects coming soon...</MoreProjects>
   </StyledWrapper>
 );
 
