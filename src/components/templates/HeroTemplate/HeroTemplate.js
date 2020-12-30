@@ -170,6 +170,11 @@ from, to { border-color: transparent }
 
     const Job = styled.span`
     display: block;
+    font-size: 2.7rem;
+    border-right: .15em solid red;
+    animation: ${Typing} .80s step-end infinite;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     ${({theme}) => theme.mq.desktop}{
       display: block;
