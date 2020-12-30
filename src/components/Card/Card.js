@@ -15,7 +15,7 @@ const StyledCards = styled.div`
 &:hover{
   transform: scale(1.01); 
 }
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
         font-size: 3rem;
         margin: 0px;
         padding: 0px;
@@ -24,7 +24,7 @@ const StyledCards = styled.div`
         width: 400px;
         height: 100%;
       }
-      ${({theme}) => theme.mq.desktop}{
+      ${({ theme }) => theme.mq.desktop}{
           position: relative;
           margin: 0px;
           padding: 0px;
@@ -33,7 +33,7 @@ const StyledCards = styled.div`
           width: 400px;
           height: 100%;
       }
-      ${({theme}) => theme.mq.full}{
+      ${({ theme }) => theme.mq.full}{
         width: 500px;
 
       }
@@ -53,7 +53,7 @@ overflow-wrap: break-word;
 font-size: 2rem;
 
 
-${({theme}) => theme.mq.desktop}{
+${({ theme }) => theme.mq.desktop}{
 
 
   font-size: 2rem;
@@ -64,7 +64,7 @@ ${({theme}) => theme.mq.desktop}{
 const Technology = styled.p`
 margin-top: 20px;
 font-size: 2rem;
-${({theme}) => theme.mq.desktop}{
+${({ theme }) => theme.mq.desktop}{
 
 
   font-weight: bold;
@@ -79,7 +79,7 @@ background-position: center;
 background-repeat: no-repeat; 
 background-size: cover;
 border-radius: 10px 10px 0px 0px;
-${({theme}) => theme.mq.tablet}{
+${({ theme }) => theme.mq.tablet}{
   width: 100%;
   height: 200px; 
   background-position: center;
@@ -87,7 +87,7 @@ ${({theme}) => theme.mq.tablet}{
   background-size: cover;
   border-radius: 10px 10px 0px 0px;
 }
-${({theme}) => theme.mq.desktop}{
+${({ theme }) => theme.mq.desktop}{
   width: 100%;
   height: 200px; 
   background-position: center;
@@ -103,7 +103,7 @@ const DottedLine = styled.div`
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 20px;
-    ${({theme}) => theme.mq.huge}{
+    ${({ theme }) => theme.mq.huge}{
         width: 10rem;
 
         
@@ -122,10 +122,10 @@ transition: 0.3s;
 &:hover{
   opacity: 0.9; 
 }
-${({theme}) => theme.mq.tablet}{
+${({ theme }) => theme.mq.tablet}{
   font-size: 2rem;
 }
-${({theme}) => theme.mq.desktop}{
+${({ theme }) => theme.mq.desktop}{
     margin-top: 20px;
     margin-right: 10px;
 
@@ -134,7 +134,7 @@ ${({theme}) => theme.mq.desktop}{
     font-size: 2.5rem;
 
   }
-  ${({theme}) => theme.mq.full}{
+  ${({ theme }) => theme.mq.full}{
     font-size: 2.5rem;
     width: 25%;
   }
@@ -153,10 +153,10 @@ transition: 0.3s;
   opacity: 0.9; 
 }
 
-${({theme}) => theme.mq.tablet}{
+${({ theme }) => theme.mq.tablet}{
     font-size: 2rem;
 }
-${({theme}) => theme.mq.desktop}{
+${({ theme }) => theme.mq.desktop}{
     margin-top: 20px;
     margin-right: 10px;
 
@@ -165,7 +165,7 @@ ${({theme}) => theme.mq.desktop}{
     font-size: 2.5rem;
 
   }
-  ${({theme}) => theme.mq.full}{
+  ${({ theme }) => theme.mq.full}{
     font-size: 2.5rem;
     width: 25%;
   } 
@@ -180,32 +180,32 @@ width: auto;
 `
 
 const Projects = [
-    {"images": Weather,"name": "Weather-app", "description": "Simple, lightweight & easy-to-use weather app for website.", "technology": "JS", "live": "https://miedzinskijakub.github.io/Weather-app/", "code": "https://github.com/miedzinskijakub/Weather-app"},
-    {"images": Baroq,"name": "Pub-site", "description": "This is simple pub-page", "technology": "JS", "live": "https://miedzinskijakub.github.io/pub/", "code": "https://github.com/miedzinskijakub/pub"},
+  { "images": Weather, "name": "Weather-app", "description": "Simple, lightweight & easy-to-use weather app for website.", "technology": "JS", "live": "https://miedzinskijakub.github.io/Weather-app/", "code": "https://github.com/miedzinskijakub/Weather-app" },
+  { "images": Baroq, "name": "Pub-site", "description": "This is simple pub-page", "technology": "JS", "live": "https://miedzinskijakub.github.io/pub/", "code": "https://github.com/miedzinskijakub/pub" },
 ];
 
-const Card = () =>(
-    <FlexCard>
-        {Projects.map( (pro, index) => (
-            <Fade left key={index}>
-            <StyledCards animate={false} >
-                <StyledProjects>
-                <ImageCont style={{backgroundImage: `url(${pro.images})`}}></ImageCont>
-                <StyledName>{pro.name}</StyledName>
-                <DottedLine></DottedLine>
-                <StyledDescription>{pro.description}</StyledDescription>
-                <a href={pro.live}><StyledButtonLive>Live</StyledButtonLive></a>
-                <a href={pro.code}><StyledButtonCode>GitHub</StyledButtonCode></a>
+const Card = () => (
+  <FlexCard>
+    {Projects.map((pro, index) => (
+      <Fade left key={index}>
+        <StyledCards animate={false} >
+          <StyledProjects>
+            <ImageCont style={{ backgroundImage: `url(${pro.images})` }}></ImageCont>
+            <StyledName>{pro.name}</StyledName>
+            <DottedLine></DottedLine>
+            <StyledDescription>{pro.description}</StyledDescription>
+            <a href={pro.live}><StyledButtonLive>Live</StyledButtonLive></a>
+            <a href={pro.code}><StyledButtonCode>GitHub</StyledButtonCode></a>
 
-                <Technology>Technology used: {pro.technology}</Technology>
-                </StyledProjects>
-                
-                </StyledCards>
-                </Fade>
+            <Technology>Technology used: {pro.technology}</Technology>
+          </StyledProjects>
 
-        ))}  
-    
-    </FlexCard>
-    );
-    
-    export default Card;
+        </StyledCards>
+      </Fade>
+
+    ))}
+
+  </FlexCard>
+);
+
+export default Card;

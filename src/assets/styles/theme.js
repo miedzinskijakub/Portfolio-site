@@ -1,9 +1,9 @@
-export const theme ={
+export const theme = {
     white: 'hsl(0, 0%, 100%)',
     primary: 'hsl(49, 100%, 58%)',
 
 
-    font:{
+    font: {
         size: {
             xs: '.9rem',
             s: '1.4rem',
@@ -12,11 +12,11 @@ export const theme ={
             xl: '7.2rem',
             xxl: '9.4rem',
         },
-    family: {
-        aktiv: '"aktiv-grotesk", sans-serif',
-        roboto: '"Roboto", sans-serif',
+        family: {
+            aktiv: '"aktiv-grotesk", sans-serif',
+            roboto: '"Roboto", sans-serif',
 
-    }
+        }
     },
     mq: {
         tablet: `@media (min-width: 768px)`,

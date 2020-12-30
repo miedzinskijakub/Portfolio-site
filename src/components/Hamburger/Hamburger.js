@@ -8,16 +8,16 @@ const StyledHamburger = styled.button`
     z-index: 9999;
     
 
-    ${({theme}) => theme.mq.desktop}{
+    ${({ theme }) => theme.mq.desktop}{
         display: none;
 
 `;
 
-    const InnerHamburger = styled.div`
+const InnerHamburger = styled.div`
     position: relative;
     width: 24px;
     height: 2px;
-    background-color: ${({ isOpen}) => isOpen ? 'transparent' : 'black'};
+    background-color: ${({ isOpen }) => isOpen ? 'transparent' : 'black'};
     transition: background-color .1s .2s ease-in-out;
 
 
@@ -34,14 +34,14 @@ const StyledHamburger = styled.button`
 
     ::before {
         top: -6px;
-        transform: translateY(${({isOpen}) => isOpen ? '6px' : '0'}) rotate(${({isOpen}) => isOpen ? '45deg' : '0'});
+        transform: translateY(${({ isOpen }) => isOpen ? '6px' : '0'}) rotate(${({ isOpen }) => isOpen ? '45deg' : '0'});
     }
 
     ::after {
         top: 6px;
-        transform: translateY(${({isOpen}) => isOpen ? '-6px' : '0'}) rotate(${({isOpen}) => isOpen ? '-45deg' : '0'});
+        transform: translateY(${({ isOpen }) => isOpen ? '-6px' : '0'}) rotate(${({ isOpen }) => isOpen ? '-45deg' : '0'});
     }
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
         width: 35px;
         height: 3px;
         ::after, ::before{
@@ -51,15 +51,15 @@ const StyledHamburger = styled.button`
     }
     ::before{
         top: -10px;
-        transform: translateY(${({isOpen}) => isOpen ? '10px' : '0'}) rotate(${({isOpen}) => isOpen ? '45deg' : '0'});
+        transform: translateY(${({ isOpen }) => isOpen ? '10px' : '0'}) rotate(${({ isOpen }) => isOpen ? '45deg' : '0'});
 
     }
     ::after{
         top: 10px;
-        transform: translateY(${({isOpen}) => isOpen ? '-10px' : '0'}) rotate(${({isOpen}) => isOpen ? '-45deg' : '0'});
+        transform: translateY(${({ isOpen }) => isOpen ? '-10px' : '0'}) rotate(${({ isOpen }) => isOpen ? '-45deg' : '0'});
 
     }
-    ${({theme}) => theme.mq.huge}{
+    ${({ theme }) => theme.mq.huge}{
         width: 40px;
         height: 4px;
         ::after, ::before{
@@ -70,21 +70,21 @@ const StyledHamburger = styled.button`
     height: 4px;
     ::before{
         top: -10px;
-        transform: translateY(${({isOpen}) => isOpen ? '10px' : '0'}) rotate(${({isOpen}) => isOpen ? '45deg' : '0'});
+        transform: translateY(${({ isOpen }) => isOpen ? '10px' : '0'}) rotate(${({ isOpen }) => isOpen ? '45deg' : '0'});
 
     }
     ::after{
         top: 10px;
-        transform: translateY(${({isOpen}) => isOpen ? '-10px' : '0'}) rotate(${({isOpen}) => isOpen ? '-45deg' : '0'});
+        transform: translateY(${({ isOpen }) => isOpen ? '-10px' : '0'}) rotate(${({ isOpen }) => isOpen ? '-45deg' : '0'});
 
     }
 
 
     `;
 
-const Hamburger = ({isOpen, ...props}) =>(
+const Hamburger = ({ isOpen, ...props }) => (
     <StyledHamburger {...props}>
-    <InnerHamburger isOpen={isOpen}/>
+        <InnerHamburger isOpen={isOpen} />
     </StyledHamburger>
 )
 

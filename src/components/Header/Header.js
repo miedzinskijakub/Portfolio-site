@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import styled, {keyframes} from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Hamburger from 'components/Hamburger/Hamburger'
 import MobileMenu from "components/MobileMenu/MobileMenu"
 import { animateScroll as scroll } from 'react-scroll'
 
 const scrollToTop = () => {
-    scroll.scrollToTop(); 
+    scroll.scrollToTop();
 };
 const Bounce = keyframes`
 0%, 60%, 75%, 90%, 100% {
@@ -55,19 +55,19 @@ const StyledWrapper = styled.div`
     animation-delay: 0ms;
     animation-duration: 1000ms;
 
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
         align-items: center;
 
         svg{
             font-size: 30px;
         }
     }
-    ${({theme}) => theme.mq.desktop}{
+    ${({ theme }) => theme.mq.desktop}{
         svg{
             font-size: 25px;
         }
 }
-${({theme}) => theme.mq.huge}{
+${({ theme }) => theme.mq.huge}{
     svg{
         font-size: 40px;
     }
@@ -75,7 +75,7 @@ ${({theme}) => theme.mq.huge}{
 }
 
     `;
-    const Color = styled.span`
+const Color = styled.span`
     color: #5933E3;
  
 `
@@ -86,11 +86,11 @@ font-size: 28px;
 font-weight: 700;
 cursor: pointer;
 
-${({theme}) => theme.mq.tablet}{
+${({ theme }) => theme.mq.tablet}{
     font-size: 4rem;
 
   }
-  ${({theme}) => theme.mq.full}{
+  ${({ theme }) => theme.mq.full}{
     font-size: 6rem;
 
   }
@@ -99,23 +99,23 @@ ${({theme}) => theme.mq.tablet}{
 
 
 
-const Header = () =>{
+const Header = () => {
 
-const [isMenuOpen, setMenuState] = useState(false);
-
-
-const toggleMobileMenu = () => {
-    setMenuState(!isMenuOpen);
-}
+    const [isMenuOpen, setMenuState] = useState(false);
 
 
-    return(
-<StyledWrapper>
-    <StyledHeading onClick={scrollToTop}>Jakub<Color>Miedziński.</Color></StyledHeading>
-    <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen}/>
-    <MobileMenu toogle={toggleMobileMenu} isOpen={isMenuOpen}/>
-</StyledWrapper>
-)
-    };
+    const toggleMobileMenu = () => {
+        setMenuState(!isMenuOpen);
+    }
+
+
+    return (
+        <StyledWrapper>
+            <StyledHeading onClick={scrollToTop}>Jakub<Color>Miedziński.</Color></StyledHeading>
+            <Hamburger onClick={toggleMobileMenu} isOpen={isMenuOpen} />
+            <MobileMenu toogle={toggleMobileMenu} isOpen={isMenuOpen} />
+        </StyledWrapper>
+    )
+};
 
 export default Header;

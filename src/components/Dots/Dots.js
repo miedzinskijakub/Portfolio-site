@@ -113,14 +113,14 @@ const Dot = styled.div`
     height: 15px;
     width: 15px;
     animation: ${animationone} 25s linear infinite;
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
         height: 20px;
         width: 20px;
     
       }
     `
 
-    const DotTwo = styled.div`
+const DotTwo = styled.div`
     z-index: -1;
     position: absolute;
     border-radius: 100%;
@@ -131,13 +131,13 @@ const Dot = styled.div`
     height: 10px;
     width: 10px;
     animation: ${animationTwo} 33s linear infinite;
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
         height: 15px;
         width: 15px;
     
       }
     `
-    const DotThree = styled.div`
+const DotThree = styled.div`
     z-index: -1;
     position: absolute;
     border-radius: 100%;
@@ -148,13 +148,13 @@ const Dot = styled.div`
     height: 20px;
     width: 20px;
     animation: ${animationFour} 30s linear infinite;
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
         height: 25px;
         width: 25px;
     
       }
     `
-    const DotFour = styled.div`
+const DotFour = styled.div`
     z-index: -1;
     position: absolute;
     border-radius: 100%;
@@ -164,13 +164,13 @@ const Dot = styled.div`
     height: 10px;
     width: 10px;
     animation: ${animationFive} 23s linear infinite;
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
         height: 15px;
         width: 15px;
     
       }
     `
-    const DotFive = styled.div`
+const DotFive = styled.div`
     z-index: -1;
     position: absolute;
     border-radius: 100%;
@@ -180,13 +180,13 @@ const Dot = styled.div`
     height: 10px;
     width: 10px;
     animation: ${animationSix} 26s linear infinite;
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
         height: 15px;
         width: 15px;
     
       }
     `
-    const DotSix = styled.div`
+const DotSix = styled.div`
     z-index: -1;
     position: absolute;
     border-radius: 100%;
@@ -196,13 +196,13 @@ const Dot = styled.div`
     height: 10px;
     width: 10px;
     animation: ${animationThree} 43s linear infinite;
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
         height: 15px;
         width: 15px;
     
       }
     `
-const Dots = () =>(
+const Dots = () => (
     <div>
         <Dot></Dot>
         <DotTwo></DotTwo>
@@ -211,6 +211,6 @@ const Dots = () =>(
         <DotFive></DotFive>
         <DotSix></DotSix>
     </div>
-    );
-    
-    export default Dots;
+);
+
+export default Dots;

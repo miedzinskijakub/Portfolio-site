@@ -18,10 +18,10 @@ const StyledWrapper = styled.div`
     z-index: 9998;
     flex-direction: column;
     background-color: white;
-    transform: translate(${({isOpen}) => isOpen ? '0%' : '100%'});
+    transform: translate(${({ isOpen }) => isOpen ? '0%' : '100%'});
     transition: transform .25s ease-in-out;
     
-    ${({theme}) => theme.mq.desktop}{
+    ${({ theme }) => theme.mq.desktop}{
         width: auto;
         height: auto;
         justify-content: space-between;
@@ -31,7 +31,7 @@ const StyledWrapper = styled.div`
         flex-direction: row;
 
     }
-    ${({theme}) => theme.mq.full}{
+    ${({ theme }) => theme.mq.full}{
         width: auto;
         height: auto;
         justify-content: flex-end;
@@ -55,11 +55,11 @@ const MenuLink = styled.div`
     opacity: ${({ isOpen }) => isOpen ? '1' : '0'};
     transition: opacity .25s .20s ease-in-out;
 
-${({theme}) => theme.mq.tablet}{
+${({ theme }) => theme.mq.tablet}{
     margin-top: 60px;
     font-size: 4rem;
     }
-    ${({theme}) => theme.mq.desktop}{
+    ${({ theme }) => theme.mq.desktop}{
         font-size: 1.8rem;
         margin-right: 50px;
         margin-top: auto;
@@ -73,14 +73,14 @@ ${({theme}) => theme.mq.tablet}{
    
         }
     }
-    ${({theme}) => theme.mq.huge}{
+    ${({ theme }) => theme.mq.huge}{
         font-size: 2rem;
         margin-top: auto;
         position: relative;
         opacity: 1;
 
     }
-    ${({theme}) => theme.mq.full}{
+    ${({ theme }) => theme.mq.full}{
         font-size: 2.6rem;
         margin-right: 100px;
         margin-top: auto;
@@ -99,7 +99,7 @@ color: #542CE2;
 background: none;
 margin-right: 5px;
 
-${({theme}) => theme.mq.desktop}{
+${({ theme }) => theme.mq.desktop}{
     position: relative;
     height: 20px;
 
@@ -111,11 +111,11 @@ ${({theme}) => theme.mq.desktop}{
     }
 }
 
-${({theme}) => theme.mq.huge}{
+${({ theme }) => theme.mq.huge}{
     font-size: 1rem;
     color: #542CE2;
 }
-${({theme}) => theme.mq.full}{
+${({ theme }) => theme.mq.full}{
     display: inline-block;
     font-size: 2.6rem;
     border-color: #542CE2;
@@ -141,11 +141,11 @@ background: none;
 border-radius: 100px;
 
 
-${({theme}) => theme.mq.tablet}{
+${({ theme }) => theme.mq.tablet}{
 font-size: 4rem;
 }
 
-${({theme}) => theme.mq.desktop}{
+${({ theme }) => theme.mq.desktop}{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -180,25 +180,25 @@ ${({theme}) => theme.mq.desktop}{
 `
 
 
- 
-const MobileMenu = ({isOpen, toogle}) => {
+
+const MobileMenu = ({ isOpen, toogle }) => {
 
     const menuItems = [
         <Link onClick={toogle} to="about" spy={true} smooth={true}><p>About</p></Link>,
         <Link onClick={toogle} to="work" spy={true} smooth={true}>Work</Link>,
-        <Link onClick={toogle} to="contact" spy={true} smooth={true}><LetsTalk><Icon/><p>Let's talk!</p></LetsTalk></Link>,
+        <Link onClick={toogle} to="contact" spy={true} smooth={true}><LetsTalk><Icon /><p>Let's talk!</p></LetsTalk></Link>,
     ];
 
-    return(
+    return (
         <StyledWrapper onClick={toogle} isOpen={isOpen}>
 
-        
-        {menuItems.map( (item, index) => (
-         <MenuLink key={index} isOpen={isOpen}
-         onClick={toogle}>{item}</MenuLink>
-        ))}
-         
-     </StyledWrapper>
+
+            {menuItems.map((item, index) => (
+                <MenuLink key={index} isOpen={isOpen}
+                    onClick={toogle}>{item}</MenuLink>
+            ))}
+
+        </StyledWrapper>
     )
 
 }

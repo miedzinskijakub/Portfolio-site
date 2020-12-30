@@ -6,14 +6,14 @@ import SEO from '../../SEO/SEO';
 import { theme } from 'assets/styles/theme';
 import Header from 'components/Header/Header'
 
-const MainTemplate = ({children}) => (
+const MainTemplate = ({ children }) => (
     <>
-        <SEO/>
-        <GlobalStyle/>
+        <SEO />
+        <GlobalStyle />
         <ThemeProvider theme={theme}>
             <>
-            <Header/>
-            {children}
+                <Header />
+                {children}
             </>
         </ThemeProvider>
     </>

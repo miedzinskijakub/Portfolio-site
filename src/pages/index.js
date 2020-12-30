@@ -9,13 +9,13 @@ import Footer from 'components/Footer/Footer'
 
 const IndexPage = () => (
   <MainTemplate>
-    
-      <Hero/>
-      <About/>
-      <MyWorks/>
-      <MySkills/>
-      <Contact/>
-      <Footer/>
+
+    <Hero />
+    <About />
+    <MyWorks />
+    <MySkills />
+    <Contact />
+    <Footer />
   </MainTemplate>
 )
 

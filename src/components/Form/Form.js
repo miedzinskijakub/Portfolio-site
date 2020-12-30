@@ -7,8 +7,8 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: ${({theme}) => theme.font.family.roboto};
-  ${({theme}) => theme.mq.full}{
+  font-family: ${({ theme }) => theme.font.family.roboto};
+  ${({ theme }) => theme.mq.full}{
        
     z-index: 15;
   }
@@ -28,18 +28,18 @@ background-color: rgba(0, 0, 0, 0.1);
 }
 
 
-${({theme}) => theme.mq.tablet}{
+${({ theme }) => theme.mq.tablet}{
   ::placeholder,
   ::-webkit-input-placeholder {
     font-size: 2rem;
   }
 }
 
-${({theme}) => theme.mq.huge}{
+${({ theme }) => theme.mq.huge}{
   width: 50%;
   height: 50px;
 }
-${({theme}) => theme.mq.full}{
+${({ theme }) => theme.mq.full}{
   height: 60px;
 
  ::placeholder,
@@ -60,17 +60,17 @@ background-color: rgba(0, 0, 0, 0.1);
 :focus{
   box-shadow: 0 0 3pt 1pt #542CE2;
 }
-${({theme}) => theme.mq.tablet}{
+${({ theme }) => theme.mq.tablet}{
   ::placeholder,
   ::-webkit-input-placeholder {
     font-size: 2rem;
   }
 }
-${({theme}) => theme.mq.huge}{
+${({ theme }) => theme.mq.huge}{
   width: 60%;
   height: 100px;
 }
-${({theme}) => theme.mq.full}{
+${({ theme }) => theme.mq.full}{
   height: 110px;
   ::placeholder,
   ::-webkit-input-placeholder {
@@ -90,15 +90,15 @@ transition: 0.3s;
   opacity: 0.9; 
   box-shadow: 2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0);
 }
-${({theme}) => theme.mq.tablet}{
+${({ theme }) => theme.mq.tablet}{
   font-size: 2rem;
   width: 60%;
 
 }
-${({theme}) => theme.mq.huge}{
+${({ theme }) => theme.mq.huge}{
   width: 30%;
 }
-${({theme}) => theme.mq.full}{
+${({ theme }) => theme.mq.full}{
   height: 60px;
 }
 `
@@ -108,7 +108,7 @@ ${({theme}) => theme.mq.full}{
 class ContactForm extends React.PureComponent {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       name: '',
       email: '',
@@ -126,7 +126,7 @@ class ContactForm extends React.PureComponent {
   recaptchaLoaded() {
     this.setState({ recaptchaLoad: true });
   }
-  
+
   verifiedRecaptcha(response) {
     if (response) {
       this.setState({ isVerified: true });
@@ -146,20 +146,20 @@ class ContactForm extends React.PureComponent {
         to_name: 'Jakub',
         message: message,
       };
-    
-    emailjs.send(
-      'service_zuw9gk5',
-      'template_72t47tb',
-       templateParams,
-      'user_d2qlNmLBzGtRhxxzPhi0t'
+
+      emailjs.send(
+        'service_zuw9gk5',
+        'template_72t47tb',
+        templateParams,
+        'user_d2qlNmLBzGtRhxxzPhi0t'
       );
       alert("Twoja wiadomość została wysłana pomyślnie.");
       this.resetForm();
-    }else{
+    } else {
       alert('Sprawdź czy kod captcha został poprawnie wprowadzony.');
     }
   }
-  
+
 
   resetForm() {
     this.setState({
@@ -177,53 +177,53 @@ class ContactForm extends React.PureComponent {
 
   render() {
 
-   
+
     const { name, email, message } = this.state;
 
     return (
       <StyledForm netlify-honeypot="bot-field" data-netlify="true" onSubmit={this.handleSubmit}>
-              <p style={{visibility: 'hidden'}}>
+        <p style={{ visibility: 'hidden' }}>
           <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
         </p>
-          
-            <StyledInput
-              name="name"
-              type="text"
-              placeholder="Your first and last name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          
-          
-            <StyledInput
-              name="email"
-              type="email"
-              placeholder="email@gmail.com"
-              value={email}
-              onChange={this.handleChange}
-            />
-        
-            <StyledTextArea
-              name="message"
-              placeholder="Tell me more about..."
-              value={message}
-              onChange={this.handleChange}
-            /><br></br>
-  
-          <Recaptcha
-        sitekey="6LcvfhkaAAAAAEa73rwhBS-1nHf3MIMDPacakXDh"
+
+        <StyledInput
+          name="name"
+          type="text"
+          placeholder="Your first and last name"
+          value={name}
+          onChange={this.handleChange}
+        />
+
+
+        <StyledInput
+          name="email"
+          type="email"
+          placeholder="email@gmail.com"
+          value={email}
+          onChange={this.handleChange}
+        />
+
+        <StyledTextArea
+          name="message"
+          placeholder="Tell me more about..."
+          value={message}
+          onChange={this.handleChange}
+        /><br></br>
+
+        <Recaptcha
+          sitekey="6LcvfhkaAAAAAEa73rwhBS-1nHf3MIMDPacakXDh"
           render="explicit"
           onloadCallback={this.recaptchaLoaded}
-        verifyCallback={this.verifiedRecaptcha}
-          />
+          verifyCallback={this.verifiedRecaptcha}
+        />
 
-            <StyledButton color="dark">Send a message</StyledButton>
-          
-         
-        
-      
+        <StyledButton color="dark">Send a message</StyledButton>
+
+
+
+
       </StyledForm>
-       
+
     );
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Dots from 'components/Dots/Dots'
-import { Link  } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 
 const FadeInLeft = keyframes`
@@ -29,8 +29,8 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    font-family: ${({theme}) => theme.font.family.roboto};
-      ${({theme}) => theme.mq.desktop}{
+    font-family: ${({ theme }) => theme.font.family.roboto};
+      ${({ theme }) => theme.mq.desktop}{
         overflow: hidden;
 
       }  
@@ -40,26 +40,26 @@ const StyledWrapper = styled.div`
 const StyledHeading = styled.h1`
     color: #121212;
     font-size: 7rem;
-    ${({theme}) => theme.mq.iphone}{
+    ${({ theme }) => theme.mq.iphone}{
       font-size: 9rem;
    
     }
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
       margin-right: 10px;
       font-size: 13rem;
 
     }
-    ${({theme}) => theme.mq.desktop}{
+    ${({ theme }) => theme.mq.desktop}{
         margin-right: 10px;
         font-size: 10rem;
 
       }
-      ${({theme}) => theme.mq.huge}{
+      ${({ theme }) => theme.mq.huge}{
         font-size: 12rem;
         display: inline-block;
     
       }
-      ${({theme}) => theme.mq.full}{
+      ${({ theme }) => theme.mq.full}{
         font-size: 14rem;
         animation-name: ${FadeInLeft};
         animation-delay: 0ms;
@@ -70,7 +70,7 @@ const StyledHeading = styled.h1`
 `
 const Hello = styled.span`
     display: block;
-    ${({theme}) => theme.mq.huge}{
+    ${({ theme }) => theme.mq.huge}{
       font-size: 10rem;
       display: inline-block;
   
@@ -90,11 +90,11 @@ const Hire = styled.button`
       opacity: 0.9; 
       box-shadow: 2px 5px 5px 0px #6A41E5, 5px 5px 15px 5px rgba(0,0,0,0);
     }
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
       font-size: 2rem;
       width: 30%;
     }
-    ${({theme}) => theme.mq.desktop}{
+    ${({ theme }) => theme.mq.desktop}{
         margin-top: 20px;
         margin-right: 10px;
 
@@ -106,13 +106,13 @@ const Hire = styled.button`
         animation-delay: 0ms;
         animation-duration: 1000ms;
       }
-      ${({theme}) => theme.mq.huge}{
+      ${({ theme }) => theme.mq.huge}{
 
         width: 20%;
 
 
       }
-      ${({theme}) => theme.mq.full}{
+      ${({ theme }) => theme.mq.full}{
         font-size: 3rem;
         width: 15%;
       }
@@ -152,7 +152,7 @@ const Scroll = styled.div`
         border-radius: 50%;
         animation: ${ScrollEfect} 2s infinite;
     }
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
       width: 30px;
       height: 45px;
       ::before{
@@ -163,54 +163,29 @@ const Scroll = styled.div`
 
     
 `
-/*
-    const WaveSvg = styled.svg`
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 1;
-    ${({theme}) => theme.mq.desktop}{
-      }
-      ${({theme}) => theme.mq.full}{
-        height: 200px;
-      }
-    `
-    const WaveSvg1 = styled.svg`
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
-    z-index: -1;
-    ${({theme}) => theme.mq.desktop}{
-      }
-      ${({theme}) => theme.mq.full}{
-        height: 200px;
-      }
-    `
-    */
+
 const Typing = keyframes`
 from, to { border-color: transparent }
 50% { border-color: black; }
 `
 
-    const Job = styled.span`
+const Job = styled.span`
     display: block;
     font-size: 2.7rem;
     border-right: .15em solid red;
     animation: ${Typing} .80s step-end infinite;
     margin-top: 10px;
     margin-bottom: 10px;
-    ${({theme}) => theme.mq.iphone}{
+    ${({ theme }) => theme.mq.iphone}{
       font-size: 3rem;
   
     }
 
-    ${({theme}) => theme.mq.tablet}{
+    ${({ theme }) => theme.mq.tablet}{
       font-size: 6rem;
 
     }
-    ${({theme}) => theme.mq.desktop}{
+    ${({ theme }) => theme.mq.desktop}{
       display: block;
       font-size: 5rem;
       font-weight: bold;
@@ -219,11 +194,11 @@ from, to { border-color: transparent }
 
     }
     
-    ${({theme}) => theme.mq.huge}{
+    ${({ theme }) => theme.mq.huge}{
       font-size: 7.5rem;
   
     }
-    ${({theme}) => theme.mq.full}{
+    ${({ theme }) => theme.mq.full}{
       display: block;
       font-size: 9rem;
       font-weight: bold;
@@ -234,71 +209,25 @@ from, to { border-color: transparent }
     }
    
     `
-    /*
-    const Fala = styled.img`
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-${({theme}) => theme.mq.desktop}{
-      }
-      ${({theme}) => theme.mq.full}{
-        width: 100%!important;
-        height: 300px;    
+
+const Hero = () => (
 
 
-      }
-    `
-    const WaveSvg1 = styled.img`
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-
-    width: 100%;
-    z-index: -1;
-    opacity: 0.7;
-    ${({theme}) => theme.mq.desktop}{
-      }
-      ${({theme}) => theme.mq.full}{
-        width: 100%!important;
-        height: 300px;    
-
-      }
-    `
-      const Waves = styled.div`
-      overflow: hidden;
-      position: absolute;
-    width: 100vw;
-    height: 25%;
-    bottom: 0px;
-    left: 0;
-      `
-
-          <Waves>
-      <Fala src={Wave}></Fala>
-      <WaveSvg1 src={WaveBack}></WaveSvg1>
-
- 
-</Waves>
-*/
-const Hero = () =>(
-
-  
-<StyledWrapper id="home">
-    <Dots/>
+  <StyledWrapper id="home">
+    <Dots />
     <StyledHeading >
       <div>Hi there</div>
-      
+
       <div>I'm Jakub</div>
-      
-    <Job>Frontend Developer</Job>
+
+      <Job>Frontend Developer</Job>
     </StyledHeading>
 
     <Link to="contact" spy={true} smooth={true}><Hire>Hire me</Hire></Link>
     <Scroll></Scroll>
-   
 
-</StyledWrapper>
+
+  </StyledWrapper>
 
 );
 
