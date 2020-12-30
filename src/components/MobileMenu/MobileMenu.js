@@ -179,13 +179,31 @@ ${({theme}) => theme.mq.desktop}{
 
 `
 
-const menuItems = [
-    <Link to="about" spy={true} smooth={true}><p>About</p></Link>,
-    <Link to="work" spy={true} smooth={true}>Work</Link>,
-    <Link to="contact" spy={true} smooth={true}><LetsTalk><Icon/><p>Let's talk!</p></LetsTalk></Link>,
-];
- 
 
+ 
+const MobileMenu = ({isOpen, toogle}) => {
+
+    const menuItems = [
+        <Link onClick={toogle} to="about" spy={true} smooth={true}><p>About</p></Link>,
+        <Link onClick={toogle} to="work" spy={true} smooth={true}>Work</Link>,
+        <Link onClick={toogle} to="contact" spy={true} smooth={true}><LetsTalk><Icon/><p>Let's talk!</p></LetsTalk></Link>,
+    ];
+
+    return(
+        <StyledWrapper onClick={toogle} isOpen={isOpen}>
+
+        
+        {menuItems.map( (item, index) => (
+         <MenuLink key={index} isOpen={isOpen}
+         onClick={toogle}>{item}</MenuLink>
+        ))}
+         
+     </StyledWrapper>
+    )
+
+}
+
+/*
 const MobileMenu = ({isOpen, toogle}) => (
 
     <StyledWrapper onClick={toogle} isOpen={isOpen}>
@@ -200,5 +218,5 @@ const MobileMenu = ({isOpen, toogle}) => (
    
    );
 
-
+*/
 export default MobileMenu;
