@@ -12,6 +12,12 @@ width: 100vw;
 font-family: ${({theme}) => theme.font.family.roboto};
 font-size: ${({theme}) => theme.font.size.s};
 
+${({theme}) => theme.mq.iphone}{
+  font-size: 2rem;
+
+
+}
+
 ${({theme}) => theme.mq.tablet}{
 
     font-size: 2.5rem;
@@ -26,16 +32,16 @@ ${({theme}) => theme.mq.tablet}{
     font-size: 3.5rem;
 
   }
-  ${({theme}) => theme.mq.iphone}{
-    font-size: 2rem;
- 
 
-  }
 `
 const StyledParagraph = styled.p`
 ${({theme}) => theme.mq.desktop}{
 
   font-size: 2rem;
+}
+${({theme}) => theme.mq.full}{
+
+  font-size: 3rem;
 }
 `
 const CardFlex = styled(Card)`

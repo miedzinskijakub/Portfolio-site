@@ -40,6 +40,10 @@ const StyledWrapper = styled.div`
 const StyledHeading = styled.h1`
     color: #121212;
     font-size: 7rem;
+    ${({theme}) => theme.mq.iphone}{
+      font-size: 9rem;
+   
+    }
     ${({theme}) => theme.mq.tablet}{
       margin-right: 10px;
       font-size: 13rem;
@@ -62,11 +66,7 @@ const StyledHeading = styled.h1`
         animation-duration: 1000ms;
     
       }
-      ${({theme}) => theme.mq.iphone}{
-        font-size: 9rem;
-     
-    
-      }
+
 `
 const Hello = styled.span`
     display: block;
@@ -201,6 +201,11 @@ from, to { border-color: transparent }
     animation: ${Typing} .80s step-end infinite;
     margin-top: 10px;
     margin-bottom: 10px;
+    ${({theme}) => theme.mq.iphone}{
+      font-size: 3rem;
+  
+    }
+
     ${({theme}) => theme.mq.tablet}{
       font-size: 6rem;
 
@@ -227,11 +232,7 @@ from, to { border-color: transparent }
       animation: ${Typing} .80s step-end infinite;
 
     }
-    ${({theme}) => theme.mq.iphone}{
-      font-size: 3rem;
    
-  
-    }
     `
     /*
     const Fala = styled.img`
