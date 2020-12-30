@@ -170,6 +170,10 @@ position: absolute;
 bottom: -10px;
 left: 0;
 width: 100%;
+${({theme}) => theme.mq.iphone}{
+  height: 160px;    
+
+}
 ${({theme}) => theme.mq.desktop}{
   height: 260px;
   }
@@ -188,6 +192,10 @@ left: 0;
 width: 100%;
 z-index: -1;
 opacity: 0.7;
+${({theme}) => theme.mq.iphone}{
+  height: 160px;    
+
+}
 ${({theme}) => theme.mq.desktop}{
   height: 260px;
   }
@@ -196,6 +204,7 @@ ${({theme}) => theme.mq.desktop}{
     height: 300px;    
 
   }
+ 
 `
   const Waves = styled.div`
   
@@ -203,6 +212,10 @@ ${({theme}) => theme.mq.desktop}{
 width: 100vw;
 height: 20%;
 top: -1px;
+${({theme}) => theme.mq.iphone}{
+  height: 20%;    
+
+}
   `
 
 
