@@ -177,6 +177,9 @@ ${({ theme }) => theme.mq.iphone}{
 ${({ theme }) => theme.mq.desktop}{
   height: 260px;
   }
+  ${({ theme }) => theme.mq.mac}{
+    height: 210px;
+    }
   ${({ theme }) => theme.mq.full}{
     width: 100%!important;
     height: 300px;    
@@ -199,6 +202,9 @@ ${({ theme }) => theme.mq.iphone}{
 ${({ theme }) => theme.mq.desktop}{
   height: 260px;
   }
+  ${({ theme }) => theme.mq.mac}{
+    height: 210px;
+    }
   ${({ theme }) => theme.mq.full}{
     width: 100%!important;
     height: 300px;    

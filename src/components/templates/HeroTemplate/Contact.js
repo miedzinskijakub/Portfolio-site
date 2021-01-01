@@ -203,7 +203,7 @@ const MyWorks = () => (
 
 
         <Pulsate></Pulsate>
-        I'm currently avaliable for freelance work.
+        I am currently available for work.
          </Paragraph>
       <ContactForm />
 
