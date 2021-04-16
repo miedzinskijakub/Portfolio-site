@@ -235,7 +235,7 @@ const About = () => (
         <StyledHeading>A bit about me<span role="img" aria-label="smile" aria-hidden="false">👋</span></StyledHeading>
         <StyledText>
           I'm a 20 year old developer who loves to create and find solutions.
-          I study computer science at Collegium da Vinci in Poznań. I'm interested in programming, mainly in javascript, designing websites and applications gives me great pleasure. I learn fast and I'm eager to learn new technologies. I'm looking for a job and development opportunities as a junior frontend developer.
+          I'm interested in programming, mainly in javascript, designing websites and applications gives me great pleasure. I learn fast and I'm eager to learn new technologies. I'm looking for a job and development opportunities as a junior frontend developer.
 
         </StyledText>
         <a href={cv} download><Download>Download CV</Download></a>

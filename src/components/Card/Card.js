@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Baroq from 'assets/images/baroq.png'
 import Fade from 'react-reveal/Fade';
+import Crud from 'assets/images/crud.png'
 import Weather from 'assets/images/weather.png'
 
 const StyledCards = styled.div`
@@ -182,6 +183,8 @@ width: auto;
 const Projects = [
   { "images": Weather, "name": "Weather-app", "description": "Simple, lightweight & easy-to-use weather app for website.", "technology": "JS", "live": "https://miedzinskijakub.github.io/Weather-app/", "code": "https://github.com/miedzinskijakub/Weather-app" },
   { "images": Baroq, "name": "Pub-site", "description": "This is simple pub-page", "technology": "JS", "live": "https://miedzinskijakub.github.io/pub/", "code": "https://github.com/miedzinskijakub/pub" },
+  { "images": Crud, "name": "CRUD todo app", "description": "Simple TODO application that stores data locally.", "technology": "JS", "live": "https://miedzinskijakub.github.io/CRUD-todo/", "code": "https://github.com/miedzinskijakub/CRUD-todo" },
+
 ];
 
 const Card = () => (
