@@ -190,7 +190,7 @@ const Projects = [
 const Card = () => (
   <FlexCard>
     {Projects.map((pro, index) => (
-      <Fade left key={index}>
+      <Fade bottom key={index}>
         <StyledCards animate={false} >
           <StyledProjects>
             <ImageCont style={{ backgroundImage: `url(${pro.images})` }}></ImageCont>
