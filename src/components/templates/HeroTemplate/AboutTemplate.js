@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import photo from '../../../assets/images/photo.jpg'
-import cv from '../../../assets/styles/CV-Jakub-Miedzinski.pdf'
+import cv from '../../../assets/styles/CV_JM.pdf'
 import Wave from '../../../assets/images/wave.png'
 import WaveBack from '../../../assets/images/wave_back.png'
 
@@ -238,6 +238,9 @@ const About = () => (
           I'm interested in programming, mainly in javascript, designing websites and applications gives me great pleasure. I learn fast and I'm eager to learn new technologies. I'm looking for a job and development opportunities as a junior frontend developer.
 
         </StyledText>
+
+
+
         <a href={cv} download><Download>Download CV</Download></a>
       </Half>
 
