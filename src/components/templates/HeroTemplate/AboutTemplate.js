@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import photo from '../../../assets/images/photo.jpg'
-import cv from '../../../assets/styles/CV_JM.pdf'
+import cv from '../../../assets/styles/cv.pdf'
 import Wave from '../../../assets/images/wave.png'
 import WaveBack from '../../../assets/images/wave_back.png'
 
