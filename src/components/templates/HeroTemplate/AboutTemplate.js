@@ -4,6 +4,7 @@ import photo from '../../../assets/images/photo.jpg'
 import cv from '../../../assets/cvJakub.pdf'
 import Wave from '../../../assets/images/wave.png'
 import WaveBack from '../../../assets/images/wave_back.png'
+import { Link } from 'react-scroll'
 
 const FadeInLeft = keyframes`
 0% {
@@ -240,8 +241,7 @@ const About = () => (
         </StyledText>
 
 
-
-        <a href={cv} download><Download>Download CV</Download></a>
+<Link to="work" spy={true} smooth={true}><Download>My works</Download></Link>
       </Half>
 
     </StyledWrapper>
