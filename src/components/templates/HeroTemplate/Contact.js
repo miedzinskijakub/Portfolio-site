@@ -195,15 +195,14 @@ const MyWorks = () => (
 
     <HalfDescription id="contact">
       <StyledName >Get In Touch <span role="img" aria-label="contact" aria-hidden="false">📬</span></StyledName>
-      <ContactParagraph>If you’re ever interested in learning about my work and my working process with clients, please feel free to contact me with information about the projects. We can set up a call or a meet to discuss how I can utilize my skills in achieving the success of your project.
-       You can find me in a few places on the web, but if if you prefer to do it the "old way" then just write to me message.</ContactParagraph>
+      <ContactParagraph>If you are interested in my projects and you are willing to cooperate, please feel free to contact me.</ContactParagraph>
     </HalfDescription>
     <Status>
       <Paragraph>
 
 
         <Pulsate></Pulsate>
-        I'm currently avaliable for freelance work.
+        I'm currently avaliable for work.
          </Paragraph>
       <ContactForm />
 
