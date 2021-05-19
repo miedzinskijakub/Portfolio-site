@@ -187,6 +187,7 @@ class ContactForm extends React.PureComponent {
         </p>
 
         <StyledInput
+        required
           name="name"
           type="text"
           placeholder="Your first and last name"
@@ -196,6 +197,7 @@ class ContactForm extends React.PureComponent {
 
 
         <StyledInput
+        required
           name="email"
           type="email"
           placeholder="email@gmail.com"
@@ -204,6 +206,7 @@ class ContactForm extends React.PureComponent {
         />
 
         <StyledTextArea
+        required
           name="message"
           placeholder="Tell me more about..."
           value={message}
