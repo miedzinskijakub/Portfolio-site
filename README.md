@@ -11,7 +11,7 @@
 </p>
 
 ## Project Overview 🎉
-Own portfolio created on the gatsby framework and styled with Styled-Components.
+Own portfolio created on the gatsby framework and styled with Styled-Components. Website hosted on netlify.
 
 
 
@@ -21,6 +21,7 @@ Own portfolio created on the gatsby framework and styled with Styled-Components.
 | Tech                                                    | Description                              |
 | ------------------------------------------------------- | ---------------------------------------- |
 | [React]()                           | Used to build the site   |
+| [Gatsby]()                           | Used to build the site   |
 | [Styled-Components](X)                           | Used to stylize the application|
 
 
