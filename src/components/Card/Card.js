@@ -181,9 +181,9 @@ width: auto;
 `
 
 const Projects = [
-  { "images": Weather, "name": "Weather-app", "description": "Simple, lightweight & easy-to-use weather app for website.", "technology": "JS", "live": "https://miedzinskijakub.github.io/Weather-app/", "code": "https://github.com/miedzinskijakub/Weather-app" },
-  { "images": Baroq, "name": "Pub-site", "description": "This is simple pub-page", "technology": "JS", "live": "https://miedzinskijakub.github.io/pub/", "code": "https://github.com/miedzinskijakub/pub" },
-  { "images": Crud, "name": "CRUD todo app", "description": "Simple TODO application that stores data locally.", "technology": "JS", "live": "https://miedzinskijakub.github.io/CRUD-todo/", "code": "https://github.com/miedzinskijakub/CRUD-todo" },
+  { "images": Weather, "name": "Weather-app", "description": "Simple, lightweight & easy-to-use weather app for website.", "technology": "React, CSS", "live": "https://miedzinskijakub.github.io/Weather-app/", "code": "https://github.com/miedzinskijakub/Weather-app" },
+  { "images": Baroq, "name": "Pub-site", "description": "This is simple pub-page", "technology": "React, Styled-Components", "live": "https://miedzinskijakub.github.io/pub/", "code": "https://github.com/miedzinskijakub/pub" },
+  { "images": Crud, "name": "CRUD todo app", "description": "Simple TODO application that stores data locally.", "technology": "React, CSS", "live": "https://miedzinskijakub.github.io/CRUD-todo/", "code": "https://github.com/miedzinskijakub/CRUD-todo" },
 
 ];
 
